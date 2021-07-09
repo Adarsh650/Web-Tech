@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        *{background-color: rgb(41, 207, 185) ;
+         font-weight: bold;
+         font-size:x-large;
+         text-align: center;
+         border-style: double;
+    border-top: double;
+    
+        }
+         
+
+    </style>
+    <title>Armstrong Number</title>
+
+</head>
+<body>
+    <div style="border-style: double;
+    border-top: double;
+    padding: 20px;color: rgb(218, 10, 27);">
+Enter Number: <input id="no_input">
+<button onclick="armstr()">Check</button></br></br></div>
+</body>
+</html>
+<script type="text/javascript">
+    function armstr()
+    {
+    var arm=0,a,b,c,d,num;
+    num=Number(document.getElementById("no_input").value);
+    
+    temp=num;
+    while(temp>0)
+    {
+    a=temp%10;
+    temp=parseInt(temp/10); // convert float into Integer
+    arm=arm+a*a*a;
+    }
+    if(arm==num)
+    {
+    alert(""+num+" is an Armstrong number");
+    }
+    else
+    {
+    alert("Not an Armstrong number");
+    }
+    }
+    </script>

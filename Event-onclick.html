@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *{
+         text-align: center;
+         font-size: large;
+         font-style: oblique;
+      }
+      
+      h2{
+        font-size: larger;
+        color: chocolate;
+        text-align: center;
+        text-decoration-line: underline;
+      }
+      p{
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight:lighter;
+        font-size: large;
+        text-align: center;
+      }
+      .aa{
+        border:rgb(44, 165, 145);
+        border-style: double;
+        padding-bottom: 5px;
+        padding-top: 4px;
+        align-items: center;
+        margin-left: 650px;
+        height: 25px;
+        width: 60px;
+        
+      }
+     
+    </style>
+    <title>Event Listener</title>
+  </head>
+<body>
+
+<h2>Event Listener</h2>
+
+<div class="a1",id="a1"><p>The onclick event:Click below button for dynamic creation</p></div>
+
+
+<div class="aa">
+<button onclick="myFunction()">Click</button></div>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+   document.getElementById("demo").innerHTML = "All The Best";
+ }
+</script>
+
+</body>
+</html>

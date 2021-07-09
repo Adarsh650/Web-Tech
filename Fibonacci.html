@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{background:cyan;
+         text-align:center;
+         font-size: xx-large;
+         font-weight: 1000;
+         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+         font-style: italic;
+         color:crimson;
+         border-style:solid;
+         border-color: darkgreen;
+         border-width: medium;
+         letter-spacing: 5px;}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var n=prompt("enter number");
+    var a=0,b=1;
+    var c=1;
+    document.write(" "+a+" "+b)
+    for(var i=0;i<=n-2;i++)
+    {
+        c=a+b;
+        document.write(" "+c+" ")
+        a=b;
+        b=c;
+    }
+
+</script>

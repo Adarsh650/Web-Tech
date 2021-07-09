@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regular Expressions</title>
+        
+    </head>
+<body>
+    <h3>Adarsh Hegde - 1NT18IS011 -ISE 'A'</h3>
+    
+    <div class="c1" style="background-color: aquamarine;"><p><b>1.</b>Array :['goal','new','user','sit','eat','dinner']</p><h4>All the elements that do not contain 'e'</h4>
+        <button class="btn1" onclick="myfun1();">click</button>
+        <p id="p1"> </p></div>
+    
+    <div class="c2" style="background-color: burlywood;"><p><b>2.</b>Array :['goal','new','user','sit','eat','dinner']</p><h4>All the elements that contains both 'e' and 'n'  </h4>
+            <button class="btn2" onclick="myfun2();">click</button>
+            <p id="p2"> </p></div>
+    
+    <div class="c3" style="background-color: darkseagreen;"><p><b>3.</b>Array : ['lovely','1\ndentist','2 lonely','eden','fly\n','dent'] </p><h4>All the elements start with 'den' or end with 'ly' </h4>
+                <button class="btn3" onclick="myfun3();">click</button>
+                <p id="p3"> </p></div>
+   
+    <div class="c4" style="background-color: darkkhaki;"> <p><b>4.</b>Array :  ['handed','hand','handy','unhanded','handle','hand-2'] </p><h4>After repalcing 'hand' with 'X' for all words start with 'hand' </h4>
+                <button class="btn4" onclick="myfun4();">click</button>
+                <p id="p4"> </p></div>
+    
+    <div class="c5" style="background-color:darksalmon;"><p><b>5.</b>String : "refused reed redo received" </p><h4>After repalcing all occurence of 'removed' or 'reed' or 'received' or 'refused' with 'X' </h4>
+                <button class="btn5" onclick="myfun5();">click</button>
+                <p id="p5"> </p></div>
+    
+    <div class="c5" style="background-color: lightgreen;" ><p><b>6.</b>String :"th\\er\\e ar\\e common asp\\ects among th\\e atl\\ernations" </p><h4>After repalcing all occurence of '\e' with 'e' </h4>
+                <button class="btn6" onclick="myfun6();">click</button>
+                <p id="p6"> </p></div>
+    
+
+
+<script>
+
+function myfun1() {
+    var arr = ['goal','new','user','sit','eat','dinner'];
+    var q=new RegExp("e");
+    const filt=arr.filter(item =>!q.test(item));
+    document.getElementById("p1").innerHTML="[ "+filt+" ]";
+}
+
+function myfun2() {
+    var arr = ['goal','new','user','sit','eat','dinner'];
+    var q=new RegExp("e");
+    var r=new RegExp("n")
+    const filt=arr.filter(item =>q.test(item)&&r.test(item));
+    document.getElementById("p2").innerHTML="[ "+filt+" ]";
+}
+function myfun3() {
+    var arr = ['lovely','1\ndentist','2 lonely','eden','fly\n','dent'];
+    var q=new RegExp('^den');
+    var r=new RegExp('ly$')
+    const filt=arr.filter(item =>q.test(item)||r.test(item));
+    document.getElementById("p3").innerHTML="[ "+filt+" ]";
+}
+function myfun4() {
+    var arr = ['handed','hand','handy','unhanded','handle','hand-2'];
+    var q=new RegExp('\\bhand\\B');
+    const filt=arr.map(item =>item.replace(q,'X'));
+    document.getElementById("p4").innerHTML="[ "+filt+" ]";
+}
+function myfun5() {
+    var str = "refused reed redo received";
+    let filt=str.replace(/removed|reed|received|refused/g,'X');
+    document.getElementById("p5").innerHTML="'"+filt+"'";
+}
+function myfun6() {
+    var str = "th\\er\\e ar\\e common asp\\ects among th\\e atl\\ernations";
+    let filt=str.replace(/\\e/g,'e');
+    document.getElementById("p6").innerHTML="'"+filt+"'";
+}
+
+
+</script>
+
+</body>
+</html>

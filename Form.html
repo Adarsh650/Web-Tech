@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="ind.css">
+<body>
+<style>
+body{
+background-color:rgb(66, 41, 207);}
+
+p {outline-color:red;}
+
+p.outset {outline-style: outset;}
+</style>
+<h1>Fill the form</h1>
+<h2>Text input fields</h2>
+<div allign="center">
+<form class="double">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="firstname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="lastname"><br>
+<label for="age">Age:</label><br>
+  <input type="text" id="age" name="age" placeholder="age"><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+</form>
+</div>
+
+<p class="outset">Note that the form itself is not visible.</p>
+
+<p class="outset">Also note that the default width of text input fields is 20 characters.</p>
+
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+
+form{
+  border-style: double;
+  border-color: black;
+  
+}
+input[type=text] {
+  width: 50%;
+  padding: 15px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  color: orange;
+  text-align: center;
+  text-decoration:underline;
+}
+h2{text-align: center;}
+
+p {
+  font-family: "Times New Roman",Times,serif;
+  font-size: 20px;
+}
+p.normal{
+font-style:normal;
+}
+p{
+  border-style: dotted;
+  border-color: red;
+}
+
+
+
+

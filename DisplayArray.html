@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        *{background-color:slategrey;
+         text-align: center;
+         font-size: large;
+        }
+        #box{
+            background-color: tomato;
+            }
+        
+    </style>
+  <body>
+    <script type="text/javascript">
+      var number = [];
+      function myFunction() {
+        var x = document.getElementById("box");
+        number.push(document.getElementById("input").value);
+        x.innerHTML = number.join();
+      }
+    </script>
+    <form>
+      <input id="input" type="text" />
+      <input type="button" onclick="myFunction()" value="Add Number" />
+    </form>
+    <br />
+    <p>Array will be</p>
+    <div allign="center",
+      id="box"
+      ;
+      style="
+        border: 1px solid black;
+        border-style: solid;
+        color:wheat;
+        width:1350px;
+        height: 50px;
+        overflow: auto;
+        align-items: center;
+        padding-top: 20px;
+        font-size: larger;
+      "
+      
+    ></div>
+  </body>
+</html>
